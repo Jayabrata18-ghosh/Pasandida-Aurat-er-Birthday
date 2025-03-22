@@ -1,0 +1,65 @@
+/* Responsive Background (16:9 Ratio) */
+.background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 56.25vw; /* Maintains 16:9 aspect ratio (9/16 = 0.5625) */
+    max-height: 100vh; /* Prevents overflow */
+    transform: translate(-50%, -50%);
+    background: url("your-collage.jpg") center/cover no-repeat;
+    filter: blur(10px);
+    animation: clearBackground 4s forwards; /* Background clears in 4 seconds */
+    overflow-y: scroll;
+}
+
+/* Background Blur Removal */
+@keyframes clearBackground {
+    100% {
+        filter: blur(0px);
+    }
+}
+
+/* Popup Text */
+.pop-up-text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4vw;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 3vw;
+    border-radius: 1vw;
+    opacity: 0;
+    text-align: center;
+    max-width: 80%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .pop-up-text {
+        font-size: 5vw;
+        padding: 5vw;
+    }
+}
+/* Enable Scrollbar */
+
+/* Custom Scrollbar Styling (Optional) */
+::-webkit-scrollbar {
+    width: 10px; /* Scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Scrollbar handle color */
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker on hover */
+}

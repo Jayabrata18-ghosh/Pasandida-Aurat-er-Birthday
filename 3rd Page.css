@@ -1,0 +1,82 @@
+body {
+    background: url('your-background.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.cake-container {
+    position: relative;
+    width: 300px;  /* Keep the width as it is */
+    height: auto;
+    margin: 0 auto; /* Add this line to center horizontally */
+}
+
+#cake {
+    width: 300px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+#cake-left, #cake-right {
+    width: 150px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    display: none;
+    transition: transform 0.8s ease-out;
+}
+
+#cake-left {
+    left: 0;
+}
+
+#cake-right {
+    left: 150px;
+}
+
+.cake-split-left {
+    transform: translateX(-180px);
+}
+
+.cake-split-right {
+    transform: translateX(180px);
+}
+
+
+#knife {
+    position: absolute;
+    width: 200px; /* Increased knife size */
+    right: 50px;
+    top: 40%;
+    left: auto;
+    cursor: grab;
+    z-index: 2;
+}
+
+/* Message Box Styles */
+.message-container {
+  width: 35%; /* Adjust width as needed */
+  padding:20px;
+  background-color: rgba(25, 55, 125, 0.7); /* Optional: semi-transparent background */
+  border-radius: 10px; /* Optional: rounded corners */
+  margin-left: 300px; /* Move the box to the right */
+  box-sizing: border-box; /* Include padding in the width */
+}
+
+.message-container p {
+  line-height: 1.6; /* Adjust line spacing for readability */
+  margin-bottom: 10px; /* Add spacing between paragraphs */
+  text-align: center; /* Align text to the left */
+}
